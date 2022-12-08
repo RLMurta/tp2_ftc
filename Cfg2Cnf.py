@@ -10,7 +10,6 @@ class Cfg2Cnf:
       lines = gramatica.read().splitlines()
     self.moves={}
     self.rules={}
-    # alphas=list(map(chr, range(97, 123)))
     self.alphas=['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
     for line in lines:
       parts=line.split("=>")
@@ -29,29 +28,7 @@ class Cfg2Cnf:
       if alpha not in names:
         return alpha
     print("Error: cannot find a new and fresh name for new Grammar statement!")
-    sys.exit(-1)
-
-  def delta_add_other_case_for_his(self, array, key):
-    index = 0
-    count = len(array[key])
-    if count == 0:
-      return None
-    while index < count:
-      if key in array[key][index]:
-        array[key].append(array[key][index].replace(key, ""))
-      index+=1
-    return array[key]
-
-  def delta_add_other_case_for_others(self, array, target):
-    for key in list(array):
-      if key != target:
-        index = 0
-        count = len(array[key])
-        while index < count:
-          if target in array[key][index]:
-            array[key].append(array[key][index].replace(target, ""))
-          index+=1
-    return array  
+    sys.exit(-1) 
 
   def has_upper_and_lower_case(self, value):
     upper = False
