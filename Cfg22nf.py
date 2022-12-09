@@ -52,4 +52,4 @@ class Cfg22nf:
   def print_grammar(self):
     while self.has_member_with_length_greater_than_two(self.rules):
       self.rules = self.binarization(self.rules)
-    return self.binarization(self.rules)
+    return self.rules
