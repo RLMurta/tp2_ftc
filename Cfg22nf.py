@@ -46,7 +46,6 @@ class Cfg22nf:
                     array[name].append(values)
                     array[key][index] = array[key][index].replace(values, name)
                 index += 1
-        print (array)
         return array
 
   def print_grammar(self):

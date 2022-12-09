@@ -63,12 +63,10 @@ class Cfg2Cnf:
           index+=1
     return array
 
-  def replace_grammar_statement_names(self, array, key, char):
-    # print("Found big character(s)", char, "in", key, "statement")
-    # print("Check move tables:", self.moves)
+  def replace_individual_items(self, array, key, char):
     if char not in list(self.moves.values()):
-      print("Error: find a non-terminal upper-case character, we cannot support one statement with one Upper-case non-terminalestic!")
-      sys.exit(-1)
+      array.get(key).pop(array.get(key).index(char)) 
+      array.get(key).extend(array.get(char)) 
     return array
 
   def format_grammar(self, array):
@@ -79,7 +77,7 @@ class Cfg2Cnf:
         length=len(array[key][index])
         if length == 1:
           if not array[key][index][0].islower():
-            array=self.replace_grammar_statement_names(array, key, array[key][index])
+            array=self.replace_individual_items(array, key, array[key][index])
         elif length > 2:
           values=array[key][index][1:]
           name=self.new_name_for_grammar(array)
