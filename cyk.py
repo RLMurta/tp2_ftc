@@ -50,7 +50,7 @@ class Cyk:
                         if combinacao in variaveis_pos_1:
                             tabela[i][j].add(
                                 variaveis_pos_0[variaveis_pos_1.index(combinacao)])
-
+        print("CYK Tradicional:")
         if ('S') in tabela[len(entrada)-1][0]:
             print(entrada, "pertence a gramática")
         else:
