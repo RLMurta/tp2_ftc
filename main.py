@@ -20,5 +20,5 @@ for palavra in palavras:
     regras, inverse = cyk_mod.ler_gramatica()
     cyk_mod.cyk(regras, inverse, palavra)
     end_cyk_mod = timer()
-    print("cyk tradicional: {} ms".format(end_cyk - start_cyk, 8))
-    print("cyk modificado : {} ms".format(end_cyk_mod - start_cyk_mod, 8))
+    print("cyk tradicional: {} ms".format(end_cyk - start_cyk))
+    print("cyk modificado : {} ms".format(end_cyk_mod - start_cyk_mod))
