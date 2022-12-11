@@ -1,8 +1,12 @@
 from Cfg2Cnf import Cfg2Cnf
+from timeit import default_timer as timer
 
 class Cyk:
     def ler_gramatica(self):
+        start_cyk = timer()
         cnf = Cfg2Cnf("gramatica.txt")
+        end_cyk = timer()
+        print("Tempo GLC para CNF: {} ms".format(end_cyk - start_cyk))
         regras = cnf.print_grammar()
 
         regras_terminais = []

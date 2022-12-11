@@ -1,8 +1,12 @@
 from Cfg22nf import Cfg22nf
+from timeit import default_timer as timer
 
 class Cyk_modificado:
     def ler_gramatica(self):
+        start_cyk = timer()
         nf = Cfg22nf("gramatica.txt")
+        end_cyk = timer()
+        print("Tempo GLC para 2NF: {} ms".format(end_cyk - start_cyk))
         regras = nf.print_grammar()
         inverse = self.inverse_unit_graph(regras)
         return regras, inverse
