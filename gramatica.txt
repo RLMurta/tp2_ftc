@@ -1,4 +1,10 @@
-S => XB | AB
-X => AS
-A => a
-B => b
+S => XB | A | abXAB | AAABBB | AB | BA| f | afb | uio | j | JKL$\\
+X => AS | B | Q | SXABPQJKL | p | pP | J
+A => a | P | K | abjklp
+B => b | A | AB
+P => p | XA | S 
+Q => BP | PB | PA | AP
+J => j | jJ | JJ | JKL
+K => kj | kk | kK | L 
+L => l | ll | lL | lM 
+P => S | A | B | SABK | p
