@@ -9,15 +9,15 @@ with open('input.txt') as f:
 for palavra in palavras:
     print("palavra: {}".format(palavra))
 
-    start_cyk = timer()
     cyk = Cyk()
     r_variaveis, r_terminais = cyk.ler_gramatica()
+    start_cyk = timer()
     cyk.cyk(r_variaveis, r_terminais, palavra)
     end_cyk = timer()
 
-    start_cyk_mod = timer()
     cyk_mod = Cyk_modificado()
     regras, inverse = cyk_mod.ler_gramatica()
+    start_cyk_mod = timer()
     cyk_mod.cyk(regras, inverse, palavra)
     end_cyk_mod = timer()
     print("cyk tradicional: {} ms".format(end_cyk - start_cyk))
