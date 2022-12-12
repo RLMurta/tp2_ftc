@@ -6,7 +6,7 @@ class Cfg2Cnf:
       lines = gramatica.read().splitlines()
     self.moves={}
     self.rules={}
-    self.alphas=[str(i) for i in range(1024)]
+    self.alphas=[str(i) for i in range(60)]
     for line in lines:
       parts=line.split("=>")
       parts[0]=parts[0].strip()
@@ -32,7 +32,7 @@ class Cfg2Cnf:
     for i in value:
       if i.islower():
         lower = True
-      if i.isupper():
+      if i.isupper() or i.isnumeric():
         upper = True
     return lower and upper
 

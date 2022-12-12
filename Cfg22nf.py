@@ -6,7 +6,7 @@ class Cfg22nf:
       lines = gramatica.read().splitlines()
     self.moves={}
     self.rules={}
-    self.alphas=[str(i) for i in range(1024)]
+    self.alphas=[str(i) for i in range(60)]
     for line in lines:
       parts=line.split("=>")
       parts[0]=parts[0].strip()
@@ -26,13 +26,6 @@ class Cfg22nf:
     print("Error: cannot find a new and fresh name for new Grammar statement!")
     sys.exit(-1)
 
-  def has_member_with_length_greater_than_two(self, array):
-    for key in list(array):
-      for value in array[key]:
-        if len(value) > 2:
-          return True
-    return False
-
   def binarization(self, array):
         for key in list(array):
             index = 0
@@ -49,6 +42,4 @@ class Cfg22nf:
         return array
 
   def print_grammar(self):
-    while self.has_member_with_length_greater_than_two(self.rules):
-      self.rules = self.binarization(self.rules)
-    return self.rules
+    return self.binarization(self.rules)
