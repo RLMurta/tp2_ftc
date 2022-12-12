@@ -25,5 +25,5 @@ for palavra in palavras:
     cyk_mod.cyk(regras, inverse, palavra)
     end_cyk_mod = timer()
     print("------------------------------------------------------")
-    print("cyk tradicional: {} ms".format(end_cyk - start_cyk))
-    print("cyk modificado : {} ms".format(end_cyk_mod - start_cyk_mod))
+    print("cyk tradicional: {} s".format(end_cyk - start_cyk))
+    print("cyk modificado : {} s".format(end_cyk_mod - start_cyk_mod))

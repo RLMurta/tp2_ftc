@@ -6,7 +6,7 @@ class Cyk_modificado:
         start_cyk = timer()
         nf = Cfg22nf("gramatica.txt")
         end_cyk = timer()
-        print("Tempo GLC para 2NF: {} ms".format(end_cyk - start_cyk))
+        print("Tempo GLC para 2NF: {} s".format(end_cyk - start_cyk))
         regras = nf.print_grammar()
         inverse = self.inverse_unit_graph(regras)
         return regras, inverse

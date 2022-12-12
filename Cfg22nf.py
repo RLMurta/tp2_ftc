@@ -6,7 +6,7 @@ class Cfg22nf:
       lines = gramatica.read().splitlines()
     self.moves={}
     self.rules={}
-    self.alphas=[str(i) for i in range(60)]
+    self.alphas=[str(i) for i in range(1000)]
     for line in lines:
       parts=line.split("=>")
       parts[0]=parts[0].strip()

@@ -6,7 +6,7 @@ class Cyk:
         start_cyk = timer()
         cnf = Cfg2Cnf("gramatica.txt")
         end_cyk = timer()
-        print("Tempo GLC para CNF: {} ms".format(end_cyk - start_cyk))
+        print("Tempo GLC para CNF: {} s".format(end_cyk - start_cyk))
         regras = cnf.print_grammar()
 
         regras_terminais = []
