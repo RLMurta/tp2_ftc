@@ -1,7 +1,3 @@
-# Author: Max Base
-# Date: 2020/06/17
-# Web: maxbase.org
-# Repo: https://github.com/BaseMax/CFG2CNF
 import sys
 
 class Cfg2Cnf:
@@ -10,7 +6,7 @@ class Cfg2Cnf:
       lines = gramatica.read().splitlines()
     self.moves={}
     self.rules={}
-    self.alphas=['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+    self.alphas=[str(i) for i in range(1024)]
     for line in lines:
       parts=line.split("=>")
       parts[0]=parts[0].strip()

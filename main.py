@@ -1,3 +1,6 @@
+#Autores: Rossana Souza e Rafael Murta
+#Trabalho Pratico 2 de Fundamentos Teoricos da Computacao
+#Puc Minas - 2022
 
 from timeit import default_timer as timer
 from cyk import Cyk
@@ -7,6 +10,7 @@ import decimal
 with open('input.txt') as f:
     palavras = f.read().splitlines()
 for palavra in palavras:
+    print("------------------------------------------------------")
     print("palavra: {}".format(palavra))
 
     cyk = Cyk()
@@ -20,5 +24,6 @@ for palavra in palavras:
     start_cyk_mod = timer()
     cyk_mod.cyk(regras, inverse, palavra)
     end_cyk_mod = timer()
+    print("------------------------------------------------------")
     print("cyk tradicional: {} ms".format(end_cyk - start_cyk))
     print("cyk modificado : {} ms".format(end_cyk_mod - start_cyk_mod))
